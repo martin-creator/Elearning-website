@@ -14,11 +14,13 @@ import "../stylesheets/application"
 //= require_tree .
 //= require toastr
 
+toastr = require("toastr")
+
  $(document).ready(function(){
   $('.modal').modal();
   $('.sidenav').sidenav();
   $('.dropdown-trigger').dropdown();
 });
 
-global.toastr = require("toastr")
+
 

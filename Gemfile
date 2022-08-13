@@ -41,6 +41,10 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 # Use this to style notification
 gem 'toastr-rails', '~> 1.0'
 
+gem 'rails-dom-testing', '~> 2.0', '>= 2.0.3'
+gem 'railties', '~> 7.0', '>= 7.0.3.1'
+gem 'thor', '~> 1.2', '>= 1.2.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

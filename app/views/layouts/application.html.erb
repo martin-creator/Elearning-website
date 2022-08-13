@@ -24,6 +24,7 @@
   </head>
 
   <body>
+  
   <%= render partial: "shared/header"%>
   <%= render partial: "shared/message"%>
 	
@@ -44,4 +45,9 @@
   $('.dropdown-trigger').dropdown();
 });</script>
 <script src="toastr.js"></script>
+<script>
+$(function() {
+  toastr.info('Are you the 6 fingered man?');
+})
+</script>
 </html>

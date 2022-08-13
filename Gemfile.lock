@@ -263,11 +263,14 @@ DEPENDENCIES
   materialize-sass
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
+  rails-dom-testing (~> 2.0, >= 2.0.3)
+  railties (~> 7.0, >= 7.0.3.1)
   sass-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  thor (~> 1.2, >= 1.2.1)
   toastr-rails (~> 1.0)
   turbo-rails
   tzinfo-data
