@@ -15,7 +15,10 @@
  */
 
  @import "materialize";
+ @import "toastr";
 //= require material_icons
+//= require toastr
+
 
 body {
   display: flex;

@@ -35,7 +35,11 @@ gem 'material_icons'
 
 gem 'jquery-rails'
 
+# Use this to configure authentication
 gem 'devise', '~> 4.8', '>= 4.8.1'
+
+# Use this to style notification
+gem 'toastr-rails', '~> 1.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
