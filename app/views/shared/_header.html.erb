@@ -15,7 +15,7 @@
 </ul>
 
 <nav>
-    <div class="nav-wrapper">
+    <div class="black nav-wrapper">
       <a href="#!" class="brand-logo">Code4Pro</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -25,7 +25,10 @@
           <li><%= link_to "Login", new_user_session_path %></li>
         <% else %>
         <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger valign-wrapper" href="#!" data-target="dropdown1">
+        <%= image_tag avatar_url(current_user), class: "circle responsive-img" %> &nbsp;
+        <%= current_user.name %><i class="material-icons right">arrow_drop_down</i>
+        </a></li>
         <% end %>
       </ul>
     </div>
@@ -38,7 +41,10 @@
           <li><%= link_to "Login", new_user_session_path %></li>
         <% else %>
         <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2"><%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger valign-wrapper" href="#!" data-target="dropdown2">
+        <%= image_tag avatar_url(current_user), class: "circle responsive-img" %> &nbsp;
+        <%= current_user.name %><i class="material-icons right">arrow_drop_down</i>
+        </a></li>
         <% end %>
   </ul>
           
