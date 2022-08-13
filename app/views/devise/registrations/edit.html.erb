@@ -5,11 +5,11 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <% devise_error_messages! %>
   <div class="input-field">
-    <%= f.text_field :name, :class => "validate", :placeholder => "Name", autofocus: true %>
+    <%= f.text_field :name, :id => "name", :class => "validate", :placeholder => "Name", autofocus: true %>
   </div>
 
   <div class="input-field">
-    <%= f.email_input-field :email, :class => "validate", :placeholder => "Email", autofocus: true %>
+    <%= f.email_field :email, :id => "email", :class => "validate", :placeholder => "Email" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -17,15 +17,15 @@
   <% end %>
 
   <div class="input-field">
-    <%= f.password_input-field :password, :id => "password", :placeholder => "New Password (leave blank if you don't want to change it)", :class => "validate" autocomplete: "off" %>
+    <%= f.password_field :password, :id => "password", :placeholder => "New Password (leave blank if you don't want to change it)", :class => "validate", autocomplete: "off" %>
   </div>
 
   <div class="input-field">
-    <%= f.password_input-field :password_confirmation, :id => "password_confirmation", :placeholder => "Confirm Password", :class => "validate", autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, :id => "password_confirmation", :placeholder => "Confirm Password", :class => "validate", autocomplete: "off" %>
   </div>
 
   <div class="input-field">
-    <%= f.password_input-field :current_password,  :id => "current_password", :placeholder => "Type current password to confirm your change", :class => "validate", autocomplete: "off" %>
+    <%= f.password_field :current_password,  :id => "current_password", :placeholder => "Type current password to confirm your change", :class => "validate", autocomplete: "off" %>
   </div>
 
   <button class ="btn waves-effect waves-light" type="submit" name="action">Update</button>

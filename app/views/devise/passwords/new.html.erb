@@ -7,11 +7,11 @@
   <% devise_error_messages! %>
 
   <div class="field">
-    <%= f.email_field :email, :id=> email, :placeholder => "Email" autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, :id=> "email", :placeholder => "Email",  autofocus: true %>
   </div>
 
   <button class ="btn waves-effect waves-light" type="submit" name="action">Send me reset password instructions</button>
-  
+
 <% end %>
 
 </div>
