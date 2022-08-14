@@ -57,6 +57,8 @@ gem 'omniauth-github', '>= 1.1.2'
 
 gem 'activeadmin', '>= 2.13.1'
 
+gem 'active_skin', '~> 0.0.13'
+
 
 
 # Use Redis adapter to run Action Cable in production
