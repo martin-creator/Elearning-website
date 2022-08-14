@@ -45,7 +45,7 @@ class User < ApplicationRecord
         return registered_user
       else
         user = User.create(
-          name: access_token.raw_info.name,
+          name: access_token.extra.raw_info.name,
           provider: access_token.provider,
           email: data.email,
           uid: access_token.uid,
