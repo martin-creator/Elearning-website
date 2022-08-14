@@ -59,6 +59,10 @@ gem 'activeadmin', '>= 2.13.1'
 
 gem 'active_skin', '~> 0.0.13'
 
+gem "kt-paperclip", ">= 6.4.1"
+
+
+gem 'data_migrate', '>= 8.1.1'
 
 
 # Use Redis adapter to run Action Cable in production
