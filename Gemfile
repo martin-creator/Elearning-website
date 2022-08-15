@@ -68,6 +68,8 @@ gem 'redcarpet', '>= 3.5.1'
 
 gem 'coderay', '>= 1.1.3'
 
+gem 'friendly_id', '>= 5.4.2'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

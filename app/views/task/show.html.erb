@@ -1,9 +1,9 @@
 <div class="row">
 <div class="card z-depth-2">
-<div class="card-content">
-<div class="collection">
-<% @tasks.each do |task|%>
-    <% if task.header %>
+  <div class="card-content">
+  <div class="collection">
+    <% @tasks.each do |task|%>
+      <% if task.header %>
         <div class="collection-item active">
             <i class="mdi-social-school"><%= @task.title %></i>
         </div>
@@ -12,13 +12,11 @@
             <%= @task.title %>
         <%end%>
     <%end%>
-<% end %>
+  <% end %>
 </div>
 </div>
 </div>
-</div>
-
-<div class="col m8">
+ <div class="col m8">
 <div class="card z-depth-2">
 <div class="card-content">
 <%= @task.video %>
@@ -31,6 +29,8 @@
 </div>
 </div>
 </div>
+
+
 
 
 
