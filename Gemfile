@@ -64,6 +64,10 @@ gem "kt-paperclip", ">= 6.4.1"
 
 gem 'data_migrate', '>= 8.1.1'
 
+gem 'redcarpet', '>= 3.5.1'
+
+gem 'coderay', '>= 1.1.3'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
