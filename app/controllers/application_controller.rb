@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  before_action :configure_permitted_parameters, if: :devise_controller?
-
+  protect_from_forgery prepend: true, with: :exception
+  skip_before_action :verify_authenticity_token
   protected
 
   # we added this code to tell devise about the new user field-name
