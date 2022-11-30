@@ -60,6 +60,10 @@ gem 'active_skin'
 
 gem 'paperclip', '~> 6.1'
 
+gem 'redcarpet', '~> 3.5'
+
+gem 'coderay', '~> 1.1', '>= 1.1.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
