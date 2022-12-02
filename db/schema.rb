@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_30_152240) do
+ActiveRecord::Schema.define(version: 2022_12_02_122316) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -61,6 +61,16 @@ ActiveRecord::Schema.define(version: 2022_11_30_152240) do
     t.datetime "image_updated_at"
     t.string "slug"
     t.index ["slug"], name: "index_projects_on_slug", unique: true
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id", "user_id"], name: "index_subscriptions_on_project_id_and_user_id", unique: true
+    t.index ["project_id"], name: "index_subscriptions_on_project_id"
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|
