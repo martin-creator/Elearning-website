@@ -16,4 +16,13 @@ class ProjectController < ApplicationController
   	@users = @project.users.order('created_at DESC').first(10)
     
   end
+
+
+  def list
+    if !current_user.nil?
+      @projects = current_user.projects      
+    end
+  end
+
+  
 end

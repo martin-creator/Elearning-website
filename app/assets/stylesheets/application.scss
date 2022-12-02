@@ -31,9 +31,18 @@ p {
   font-size: 1em !important;
 }
 
-
 .container {
   width: 95%;
 }
 
+.avatar-small {
+  width: 50px;
+}
 
+.avatar-medium {
+  width: 80px;
+}
+
+.mask {
+  z-index: 99;
+}

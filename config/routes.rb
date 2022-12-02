@@ -7,7 +7,9 @@ Rails.application.routes.draw do
                       :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
 
   get 'pages/about'
+  get '/myprojects' => 'project#list'
   post '/free' => 'charge#free'
+  
 
   resources :project do
     resources :task, only: [:show]
