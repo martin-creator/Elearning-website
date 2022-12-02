@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+@import "bourbon";
 @import "materialize";
 @import "toastr";
 
@@ -30,3 +30,10 @@ main {
 p {
   font-size: 1em !important;
 }
+
+
+.container {
+  width: 95%;
+}
+
+
