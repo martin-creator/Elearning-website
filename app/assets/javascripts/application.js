@@ -13,6 +13,8 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
+//= require active_admin
+//= require materialize-sprockets
 //= require toastr
 //= require jquery.timeago
 //= require materialize
