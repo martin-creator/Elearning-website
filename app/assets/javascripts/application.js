@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require toastr
+//= require jquery.timeago
 //= require materialize
 //= require activestorage
 //= require turbolinks

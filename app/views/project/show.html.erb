@@ -1,3 +1,8 @@
+<% content_for :head do %>
+	<title><%= @project.name %> | EaglesCode</title>
+	
+<% end %>
+
 <div class="row">
 	<div class="col m4">
 		<div class="card z-depth-2">
@@ -14,6 +19,10 @@
 								<button type="submit" class="btn pink darken-2">Take this Project</button>
 							<% end %>							
 						<% else %>
+							<%= form_tag free_path, id: 'chargeForm' do %>
+
+								<button id="btn-buy" type="button" class="btn pink darken-2">Take this Project</button><br/>
+							<% end %>
 						<% end %>		
 					<% else %>
 						<%= link_to new_user_session_path do %>
@@ -41,7 +50,7 @@
 	<div class="col m8">
 		<div class="card z-depth-2">
 			<div class="card-image">
-				<%= image_tag @project.image(:thumb) %>
+				<%= image_tag @project.image %>
 			</div>
 
 
@@ -58,9 +67,14 @@
 				 <div id="about" class="col s12">
 				 		<div class="card-content grey-text text-darken-4">
 							<h5><%= @project.name %></h5>
+							<span id="average_rating"></span>
+							<p> <%= @reviews.count %> <%= @reviews.count >1? "Reviews" : "Review" %></p>
 							<hr>
 							<%= @project.content %>
 
+							<h4>Reviews</h4>
+							<div><%= render 'reviews/form' if @joined && !@hasReview %></div>
+							<div><%= render 'reviews/index' %></div>
 						</div>
 					</div>
 
@@ -79,14 +93,16 @@
 							<% end %>
 						<% end %>
 					</div>
-				</div>
-
-			    	<div id="discussion" class="col s10 offset-s1">
-			    		<div id="disqus_thread"></div>
-			
-			    	</div>			
+				</div>		
 			 </div>
 		 </div>
 	</div>
 </div>
 
+<script >
+	$('#average_rating').raty({
+		path: '/assets',
+		readOnly: true,
+		score: <%= @project.average_rating %>
+	});
+</script>
