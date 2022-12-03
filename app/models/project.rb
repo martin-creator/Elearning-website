@@ -20,4 +20,8 @@ class Project < ApplicationRecord
         name.length > 25? name[0...25] + "..." : name
     end
 
+    def average_rating
+        reviews.blank? ? 0 : reviews.average(:star).round(2)
+    end
+
 end
