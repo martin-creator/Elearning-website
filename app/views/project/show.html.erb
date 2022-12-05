@@ -1,5 +1,21 @@
 <% content_for :head do %>
 	<title><%= @project.name %> | Code4Pro</title>
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@code4startup">
+	<meta name="twitter:creator" content="@code4startup">
+	<meta name="twitter:title" content="<%= @project.name %>">
+	<meta name="twitter:description" content="<%= @project.content %>">
+	<meta name="twitter:image:src" content="<%= image_url @project.image %>">
+
+	<!-- Open Graph Data -->
+	<meta property="og:site_name" content="Eagles Code">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="<%= @project.name %>">
+	<meta property="og:description" content="<%= @project.content %>">
+	<meta property="og:image" content="<%= @project.image %>">
+
 <% end %>
 
 <div class="row">
