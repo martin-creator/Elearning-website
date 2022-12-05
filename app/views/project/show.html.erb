@@ -1,6 +1,5 @@
 <% content_for :head do %>
-	<title><%= @project.name %> | EaglesCode</title>
-	
+	<title><%= @project.name %> | Code4Pro</title>
 <% end %>
 
 <div class="row">
@@ -19,9 +18,34 @@
 								<button type="submit" class="btn pink darken-2">Take this Project</button>
 							<% end %>							
 						<% else %>
-							<%= form_tag free_path, id: 'chargeForm' do %>
+							<%= form_tag pay_path, id: 'chargeForm' do %>
+								<script src="https://checkout.stripe.com/checkout.js"></script>
+								<%= hidden_field_tag 'stripeToken' %>
+								<%= hidden_field_tag 'stripeEmail' %>
+								<%= hidden_field_tag 'project_id', @project.id %>
 
 								<button id="btn-buy" type="button" class="btn pink darken-2">Take this Project</button><br/>
+
+								<script>
+								  var handler = StripeCheckout.configure({
+								    key: '<%= ENV['pub_key'] %>',								   
+								    token: function(token, arg) {
+								    	$('#stripeToken').val(token.id);
+								      $('#stripeEmail').val(token.email);
+								      $('#chargeForm').submit();
+								    }
+								  });
+
+								  $('#btn-buy').on('click', function(e) {
+							  	     handler.open({
+								      name: 'EaglesCode',
+								      description: '<%= @project.name %>',
+								      amount: '<%= @project.price_in_cents %>',
+								      email: '<%= current_user.email %>'
+								    });
+								    e.preventDefault();
+								  });							  
+								</script>
 							<% end %>
 						<% end %>		
 					<% else %>
@@ -93,7 +117,9 @@
 							<% end %>
 						<% end %>
 					</div>
-				</div>		
+				</div>
+
+			    	>			
 			 </div>
 		 </div>
 	</div>
