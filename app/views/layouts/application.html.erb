@@ -13,6 +13,15 @@
     <script async>
       (function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='b40cb15655dcecb6fb6523c5d3b5fba14d860d2c3d77bba7f44b01eef3e08b8a';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TQGR8C9Z0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4TQGR8C9Z0');
+    </script>
   </head>
   <body>
     <%= render partial:  "shared/header" %>
@@ -30,7 +39,5 @@
         $('.sidenav').sidenav();
         $(".dropdown-trigger").dropdown();
       });
-
-      
   </script>
 </html>
